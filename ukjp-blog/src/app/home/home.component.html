@@ -1,0 +1,8 @@
+<div *ngFor='let entry of entries'>
+  <app-entry [data]='entry' view='home'>
+  </app-entry>
+</div>
+<br />
+<div style='text-align: center;'><button (click)="lastPage()">&lt;&lt;</button> - <button (click)="nextPage()">&gt;&gt;</button></div>
+<br />
+<br />

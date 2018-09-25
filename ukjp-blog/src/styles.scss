@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans|Roboto');
+@import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+body, html {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Helvetica Neue', sans-serif;
+    background: linear-gradient(#EEEEEE, white);
+}
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+.sidebar-button {
+    display: none;
+    cursor: pointer;
+    user-select: none;
+    @media screen and (max-width: 899px ){
+        display: inline;
+    }
+}
+@keyframes slideIn {
+    0% {
+        right: -2000px;
+    }
+    100% {
+        right: 0px;
+    }
+}
+@keyframes slideOutMenu {
+    0% {
+        right: 0px;
+    }
+    100% {
+        right: -2000px;
+    }
+}
+@keyframes slideOut {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+@keyframes firstLoad {
+    0% {
+        display: none;
+    }
+    100% {
+        display: block;
+    }
+}
+.sidebar {
+    display: none;
+}
+@media screen and (max-width: 899px) {
+    .sidebar {
+        height: 100%;
+        position: absolute;
+        z-index: 100;
+        right: -2000px;
+        transition: 2s;
+        width: 100%;
+        display: block;
+        background-color: black;
+        color: white;
+        li {
+            list-style: none;
+            ul {
+                cursor: pointer;
+                outline: none;
+            }
+        }
+    }
+    .first {
+        display: none;
+    }
+    .close {
+        animation-fill-mode: forwards;
+        animation-name: slideOutMenu;
+        animation-duration: 2s;
+    }
+    .open {
+        animation-fill-mode: forwards;
+        animation-name: slideIn;
+        animation-duration: 2s;
+        
+    }
+   
+}
+.slide {
+    animation-name: slideOut;
+    animation-duration: 2s;
+}
+.header {
+    background-color: black;
+    color: white;
+    height: 20px;
+    overflow: hidden;
+    z-index: 10;
+    padding: 15px;
+    width: 100%;
+    position: fixed;
+    border-bottom: 1px solid rgba(255,255,255,0.6);
+    box-shadow: 0px -2px 2px 4px rgba(0,0,0, 0.6);
+    .title {
+        font-size: 15pt;
+        font-weight: 800;
+    }
+    .menu-area {
+        position: fixed;
+        display: flex;
+        top: 0px;
+        height: 39px;
+        right: 0px;
+        @media screen and (min-width: 900px) {
+            .toggle {
+                display: none;
+            }
+            .toggle-button {
+                display: none;
+            }
+        }
+        @media screen and (max-width: 899px) {
+            .toggle {
+                display: inline;
+            }
+            .button {
+                display: none;
+            }
+        }
+        .button {
+            padding-top: 10px;
+            min-width: 10vmax;
+            text-align: center;
+            height: 39px;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: rgba(255,255,255, 0.3);
+            font-size: 18pt;
+            border-bottom: 2px solid rgba(255, 50, 50, 0.62);
+        }
+    }
+}
+.content {
+    position: absolute;
+    top: 60px;
+    padding-left: 10px;
+    height: 100%;
+    width: 99%;
+}
+
+@keyframes entryin {
+    0% {
+        transform: scale3d(1,0,1) translateY(-200px);
+    }
+    100% {
+        transform: scale3d(1,1,1) translateY(0px);
+    }
+}
+
+.entry {
+    animation-name: entryin;
+    animation-iteration-count: 1;
+    animation-duration: 0.5s;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 5px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 2px 10px 1px rgba(0,0,0, 0.4);
+    margin-bottom: 20px;
+    border-radius: 5px;
+    @media screen and (min-width: 900px) {
+        width: 70%;
+    }
+    @media screen and (max-width: 899px) {
+        width: 90%;
+    }
+    .title-container {
+        color: rgba(0,0,0,0.6);
+    }
+    .body-container {
+        padding: 10px;
+    }
+    .title {
+        text-align: center;
+        z-index: 4;
+        font-size: 30pt;
+        font-weight: 900;
+        font-family: 'Libre Barcode 39 Text', cursive;
+        cursor: pointer;
+        transition: 0.5s;
+        margin-bottom: 15px;
+    }
+    .title:hover {
+        color: black;
+    }
+    .author{
+        text-align: center;
+        border-bottom: 1px solid rgba(0,0,0, 0.4);
+        margin-bottom: 10px;
+    }
+    .tags {
+        border-top: 1px solid rgba(0,0,0, 0.4);
+    }
+    .preview{
+        color: rgba(0,0,0, 0.4);
+        padding-top: 15px;
+        padding-bottom: 15px;
+        a {
+            color: rgba(255, 50, 50, 0.62);
+        }
+        a:hover{
+            color: rgba(255, 50, 50, 0.8);
+        }
+    }
+    .author-image {
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+    }
+}
+.chip {
+    border-radius: 20px;
+    background-color: white;
+    color: rgba(0,0,0, 0.4);
+    box-shadow: 0px 0px 1px 2px rgba(0,0,0,0.3);
+    margin: 10px;
+    padding: 6px;
+    display: inline-flex;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.chip:hover {
+    color: rgba(255, 50, 50, 0.62);
+    box-shadow: 0px 0px 1px 3px rgba(0,0,0,0.3);
+}
+.about-header {
+    width: 100%;
+    height: 300px;
+}
+.about-header:hover {
+    box-shadow: 0px 0px 2px 4px rgba(0,0,0,0.3);
+}
+.desktop {
+    @media screen and (max-width: 899px) {
+        display: none;      
+    }
+}
+.about-us {
+    font-family: "Roboto", sans-serif;
+}

@@ -1,0 +1,8 @@
+<div class="sidebar" [ngClass]="{'open' : isOpen, 'close' : !isOpen, 'first' : firstLoad }">
+  <li>
+    <ul (click)='closeMenu()' style='text-align: right; padding-right: 10px;'><i class="material-icons">menu</i></ul>
+    <ul routerLink="/home" (click)='closeMenu()'>Home</ul>
+    <ul routerLink="/tags" (click)='closeMenu()'>Tags</ul>
+    <ul routerLink="/about" (click)='closeMenu()'>About</ul>
+  </li>
+</div>

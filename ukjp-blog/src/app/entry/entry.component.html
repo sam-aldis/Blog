@@ -1,0 +1,28 @@
+<div class="entry">
+  <div class="title-container">
+    <div class="title">
+      <span routerLink="/post/{{data.id}}">{{data.title}}</span>
+    </div>
+    <span *ngIf="data.headerImage"><img [src]="data.headerImage" class="about-header"/></span>
+    <div class="author">
+      <div *ngIf="data.profileImage">
+          <img [src]='data.profileImage' class='author-image' />
+      </div>
+      <br />{{data.author}}
+      <br /><i>{{data.date}}</i>
+    </div>
+  </div>
+  <div class="body-container">
+    <div class="body" *ngIf="view" [innerHTML]="data.body">
+    </div>
+    <div class="preview" *ngIf="!view">
+      {{data.subtitle}}
+      <br /><a routerLink="/post/{{data.id}}">Read More</a>
+    </div>
+  </div>
+  <div class="tags">
+    <div *ngFor="let tag of data.tags" class="chip" routerLink='/tag/{{tag}}'>
+      {{tag}}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="composer-holder">
+  <div class="tools">
+    <button (click)="addFromButton('link');"><i class='material-icons'>link</i></button> 
+    <button (click)="addFromButton('image');"><i class='material-icons'>insert_photo</i></button> 
+    <button (click)="addFromButton('style');"><i class='material-icons'>style</i></button>
+  </div>
+  <div class="composer">
+
+  </div>
+  <div class="buttons"></div>
+  <div class="editor">
+    <br /><textarea #body id='body'></textarea>
+    <br />
+    <div class="input">
+      Author 
+      <br /><input type="text" placeholder="Author" #author/></div>
+    <div class="input">
+      Title 
+      <br /><input type="text" placeholder="Title" #title />
+    </div>
+    <div class="input">
+      Subtitle 
+      <br /><input type="text" placeholder="Subtitle" #subtitle />
+    </div>
+    <div class="input">
+      Header 
+      <br /><input type="text" placeholder="Header Image URL" #headerImage />
+    </div>
+    <div class="input">
+      Profile 
+      <br /><input type="text" value="/assets/images/profile.jpg" #profileImage />
+    </div>
+    <div class="input">
+        Tags
+        <br /><input type="text" placeholder="tags ', ' seperated" #tags />
+      </div>
+    <br />
+    <br />
+    <button (click)='publishPost(body.value,author.value,title.value,subtitle.value,headerImage.value,profileImage.value,tags.value);'>Publish</button> <button (click)='savePost(body.value,author.value,title.value,subtitle.value,headerImage.value,profileImage.value,tags.value);'>Save</button>
+  </div>
+</div>

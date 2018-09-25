@@ -1,0 +1,7 @@
+<div class="entry">
+  <div class="body-container">
+    <p class="title">Tags</p>
+    <hr />
+        <div *ngFor="let tag of alltags" class="chip" style='display:inline-flex;' routerLink='/tag/{{tag.tag}}'>{{tag.tag}} ({{tag.count}})</div>
+  </div>
+</div>

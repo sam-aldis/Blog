@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+body, html {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Helvetica Neue', sans-serif;
+  background: linear-gradient(#EEEEEE, white); }
+
+.content {
+  position: relative;
+  top: 55px;
+  width: 100%;
+  height: calc(50em - 55px); }
+
+.header {
+  background-color: black;
+  color: white;
+  height: 20px;
+  overflow: hidden;
+  z-index: 10;
+  padding: 15px;
+  width: 100%;
+  position: fixed;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0px -2px 2px 4px rgba(0, 0, 0, 0.6); }
+  .header .title {
+    font-size: 15pt;
+    font-weight: 800; }
+  .header .menu-area {
+    position: fixed;
+    display: flex;
+    top: 0px;
+    height: 39px;
+    right: 0px; }
+    @media screen and (min-width: 900px) {
+      .header .menu-area .toggle {
+        display: none; }
+      .header .menu-area .toggle-button {
+        display: none; } }
+    @media screen and (max-width: 899px) {
+      .header .menu-area .toggle {
+        display: inline; }
+      .header .menu-area .button {
+        display: none; } }
+    .header .menu-area .button {
+      padding-top: 10px;
+      min-width: 10vmax;
+      text-align: center;
+      height: 39px;
+      transition: 0.5s;
+      cursor: pointer; }
+    .header .menu-area .button:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+      font-size: 18pt;
+      border-bottom: 2px solid rgba(255, 50, 50, 0.62); }
+
+.login {
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0px 0px 2px 4px rgba(0, 0, 0, 0.3); }
+  .login .login-message {
+    font-size: 18pt; }
+  .login .login-input {
+    outline: none;
+    transition: 0.5s;
+    border: none;
+    box-shadow: 0px 0px 2px 0px black;
+    border-radius: 5px;
+    height: 30px;
+    font-size: 14pt; }
+  .login .login-input:focus {
+    border-bottom: 2px solid rgba(255, 50, 50, 0.62); }
+  .login .login-submit {
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background: none;
+    box-shadow: 0px 0px 2px 0px black;
+    width: 70px;
+    font-size: 15pt;
+    height: 30px; }
+  .login .login-submit:focus {
+    background-color: black;
+    color: white; }
+
+.composer-holder {
+  margin-left: auto;
+  margin-right: auto;
+  overflow: scroll;
+  height: 80%;
+  width: 90%;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 3px 4px rgba(0, 0, 0, 0.3);
+  padding-top: 50px; }
+  .composer-holder .tools {
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center; }
+    .composer-holder .tools button {
+      position: relative;
+      top: 10px;
+      bottom: 10px;
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-left: 10px; }
+      @media screen and (max-width: 899px) {
+        .composer-holder .tools button .text {
+          display: none; } }
+  .composer-holder .editor {
+    padding: 20px; }
+    .composer-holder .editor textarea {
+      width: 90%;
+      height: 130px; }
+    .composer-holder .editor div.input {
+      display: inline-flex; }
+    .composer-holder .editor input[type=text] {
+      border-radius: 5px;
+      outline: rgba(255, 50, 50, 0.62); }
+
+/*# sourceMappingURL=styles.css.map */
