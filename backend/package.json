@@ -23,7 +23,7 @@
     "cors": "^2.8.4",
     "express": "^4.15.5",
     "md5": "^2.2.1",
-    "mongodb": "^2.2.31",
+    "mongodb": "^3.1.13",
     "mongoose": "^4.11.13",
     "ngx-cookie-service": "^1.0.9",
     "rxjs": "^5.4.3",
